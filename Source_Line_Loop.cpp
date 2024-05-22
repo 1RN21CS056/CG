@@ -24,7 +24,7 @@ void main()
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
 	glutInitWindowSize(500, 500);
 	glutInitWindowPosition(100, 100);
-	glutCreateWindow("Displaying Two Points");
+	glutCreateWindow("Displaying Square");
 	myinit();
 	glutDisplayFunc(display);
 
