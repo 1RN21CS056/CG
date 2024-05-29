@@ -1,3 +1,4 @@
+//Mouse event handling function to change the color of the square based on mouse button clicked
 #include <glut.h>
 float red = 1.0, green = 1.0, blue = 1.0;
 
