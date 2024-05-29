@@ -1,3 +1,4 @@
+//Lab Pgm 1: Develop a program to draw a line using Bresenham’s line drawing technique
 #include<iostream>
 #include<glut.h>
 #include<cmath>
