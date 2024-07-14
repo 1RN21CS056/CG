@@ -1,3 +1,4 @@
+// 2D transformation without using Built-in function
 #include<iostream>
 #include<glut.h>
 #include<stdlib.h>
