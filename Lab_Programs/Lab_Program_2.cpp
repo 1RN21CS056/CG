@@ -82,6 +82,28 @@ void keyboard(unsigned char key, int x, int y)
 	glutPostRedisplay();
 }
 
+void reshape(int width, int height) {
+    // Prevent division by zero
+    if (height == 0) {
+        height = 1;
+    }
+
+    // Set the viewport to cover the new window
+    glViewport(0, 0, width, height);
+
+    // Set the aspect ratio of the clipping area to match the viewport
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    if (width >= height) {
+        gluOrtho2D(-1.0 * width / height, 1.0 * width / height, -1.0, 1.0);
+    }
+    else {
+        gluOrtho2D(-1.0, 1.0, -1.0 * height / width, 1.0 * height / width);
+    }
+
+    glMatrixMode(GL_MODELVIEW);
+}
+
 int main(int argc, char ** argv)
 {
 	printf("Enter the scaling factors sx and sy");
@@ -93,5 +115,6 @@ int main(int argc, char ** argv)
 	init();
 	glutDisplayFunc(display);
 	glutKeyboardFunc(keyboard);
+	glutReshapeFunc(reshape);
 	glutMainLoop();
 }
