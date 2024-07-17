@@ -1,3 +1,5 @@
+// 3D OBJECT WITHOUT USING BUILT-IN FUNCTION
+
 #include<stdlib.h>
 #include<GL/glut.h>
 #include<math.h>
